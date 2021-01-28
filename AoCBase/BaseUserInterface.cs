@@ -45,6 +45,11 @@ public abstract class BaseUserInterface {
     }
 
 
+    /// <summary>
+    /// Write the answer for specified day using IAnswer interface passed as param
+    /// </summary>
+    /// <param name="iAnswer"></param>
+    /// <param name="dayNumber"></param>
     public void WriteAnswer(IAnswer iAnswer, int dayNumber) {
         if (iAnswer == null) {
             Console.WriteLine("Something went wrong");
