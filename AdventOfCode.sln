@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC2015", "AoC2015\AoC2015.csproj", "{9C0B4FFB-2E70-4BBD-A04A-3AFE804316DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoC2015", "AoC2015\AoC2015.csproj", "{9C0B4FFB-2E70-4BBD-A04A-3AFE804316DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoCBase", "AoCBase\AoCBase.csproj", "{8D749A72-A1CB-4BE0-ABB0-A1F81067F206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoCBase", "AoCBase\AoCBase.csproj", "{8D749A72-A1CB-4BE0-ABB0-A1F81067F206}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
