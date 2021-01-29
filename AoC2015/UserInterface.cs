@@ -10,6 +10,7 @@ class UserInterface : BaseUserInterface {
         IAnswer iAnswer = dayNumber switch {
             1 => new Day1.Solution(dayNumber),
             2 => new Day2.Solution(dayNumber),
+            3 => new Day3.Solution(dayNumber),
             _ => null
         };
 
