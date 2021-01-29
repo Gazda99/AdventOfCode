@@ -16,8 +16,8 @@ public abstract class BaseUserInterface {
     /// </summary>
     /// <returns>Bool value indicating if program should still be running or not</returns>
     public bool AskUser() {
-        Console.WriteLine("Type number of the day which You`d like to see an answer for." +
-                          "Type quit if you want to quit");
+        Console.WriteLine("Type number of the day which you`d like to see an answer for." +
+                          " Type \"quit\" if you want to quit.");
         var input = Console.ReadLine();
         if (input != null && input.ToLower() == "quit")
             return false;
@@ -58,12 +58,12 @@ public abstract class BaseUserInterface {
             return;
         }
 
-        string partOne = iAnswer.PartOneAnswer;
         Console.WriteLine($"Day {dayNumber} part 1 answer:");
+        string partOne = iAnswer.PartOneAnswer;
         Console.WriteLine(partOne);
 
-        string partTwo = iAnswer.PartTwoAnswer;
         Console.WriteLine($"Day {dayNumber} part 2 answer:");
+        string partTwo = iAnswer.PartTwoAnswer;
         Console.WriteLine(partTwo);
     }
 }
