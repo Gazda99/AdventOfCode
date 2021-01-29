@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace AoCBase {
 public abstract class BaseUserInterface {
@@ -56,12 +58,11 @@ public abstract class BaseUserInterface {
             return;
         }
 
-
         string partOne = iAnswer.PartOneAnswer;
-        string partTwo = iAnswer.PartTwoAnswer;
-
         Console.WriteLine($"Day {dayNumber} part 1 answer:");
         Console.WriteLine(partOne);
+
+        string partTwo = iAnswer.PartTwoAnswer;
         Console.WriteLine($"Day {dayNumber} part 2 answer:");
         Console.WriteLine(partTwo);
     }
