@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Day3\Solution.cs~RF65237bb.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Common\" />
   </ItemGroup>
 
