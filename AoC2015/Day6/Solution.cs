@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using AoCBase;
 
@@ -8,13 +7,7 @@ namespace AoC2015.Day6 {
 class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
     public Solution(int dayNumber) : base(dayNumber) {
         Data = ReadData();
-        _grid = new int[GridSize][];
-        for (int y = 0; y < _grid.Length; y++) {
-            _grid[y] = new int[GridSize];
-
-            for (int x = 0; x < _grid[y].Length; x++)
-                _grid[y][x] = 0;
-        }
+        _grid = CreateGrid(GridSize);
     }
 
     public List<Instruction> Data { get; set; }
@@ -22,7 +15,7 @@ class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
     public string PartTwoAnswer => SolveSecond().ToString();
 
     private const int GridSize = 1000;
-    private readonly int[][] _grid;
+    private int[][] _grid;
 
     public List<Instruction> ReadData() {
         List<Instruction> instructionList = new List<Instruction>();
@@ -36,6 +29,7 @@ class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
                 Coordinate from;
                 Coordinate to;
 
+                //read input and create Instructions
                 string[] rawData = line.Split(" ");
                 if (rawData.Length == 4) {
                     from = new Coordinate(Array.ConvertAll(rawData[1].Split(","),
@@ -68,6 +62,21 @@ class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
         return instructionList;
     }
 
+    /// <summary>
+    /// Creates new Grid gridSize x gridSize
+    /// </summary>
+    private static int[][] CreateGrid(int gridSize) {
+        int[][] grid = new int[gridSize][];
+        for (int y = 0; y < grid.Length; y++) {
+            grid[y] = new int[gridSize];
+
+            for (int x = 0; x < grid[y].Length; x++)
+                grid[y][x] = 0;
+        }
+
+        return grid;
+    }
+
     public int SolveFirst() {
         foreach (Instruction instruction in Data) {
             for (int y = instruction.From.B; y <= instruction.To.B; y++) {
@@ -86,7 +95,29 @@ class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
     }
 
     public int SolveSecond() {
-        return 2137;
+        _grid = CreateGrid(GridSize);
+        foreach (Instruction instruction in Data) {
+            for (int y = instruction.From.B; y <= instruction.To.B; y++) {
+                for (int x = instruction.From.A; x <= instruction.To.A; x++) {
+                    switch (instruction.TurnActivity) {
+                        case Turning.TurnOn:
+                            _grid[y][x] += 1;
+                            break;
+                        case Turning.TurnOff:
+                            if (_grid[y][x] > 0)
+                                _grid[y][x] -= 1;
+                            break;
+                        case Turning.Toggle:
+                            _grid[y][x] += 2;
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
+            }
+        }
+
+        return CountTurnedOn(_grid);
     }
 
     /// <summary>
@@ -96,7 +127,7 @@ class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
         int sum = 0;
         for (int y = 0; y < grid.Length; y++) {
             for (int x = 0; x < grid[y].Length; x++) {
-                if (grid[y][x] == 1) sum++;
+                if (grid[y][x] != 0) sum += grid[y][x];
             }
         }
 
