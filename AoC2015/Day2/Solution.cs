@@ -3,7 +3,7 @@ using System.IO;
 using AoCBase;
 
 namespace AoC2015.Day2 {
-class Solution : BaseSolution, ISolution<Present[], int, int>, IAnswer {
+class Solution : BaseSolution, ISolution<Solution.Present[], int, int>, IAnswer {
     public Solution(int dayNumber) : base(dayNumber) {
         Data = ReadData();
     }
@@ -85,15 +85,15 @@ class Solution : BaseSolution, ISolution<Present[], int, int>, IAnswer {
         Array.Sort(values);
         return volume + 2 * values[0] + 2 * values[1];
     }
-}
 
-class Present {
-    public int L;
-    public int W;
-    public int H;
+    public class Present {
+        public int L;
+        public int W;
+        public int H;
 
-    public int[] ToArray() {
-        return new int[] {L, W, H};
+        public int[] ToArray() {
+            return new int[] {L, W, H};
+        }
     }
 }
 }
