@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -61,9 +59,8 @@ class Solution : BaseSolution, ISolution<string, int, int>, IAnswer {
     /// Calculates the hash
     /// </summary>
     private static string CreateHash(MD5 md5, string key) {
-        MD5 chuj = MD5.Create();
         byte[] inputBytes = Encoding.ASCII.GetBytes(key);
-        byte[] hashBytes = chuj.ComputeHash(inputBytes);
+        byte[] hashBytes = md5.ComputeHash(inputBytes);
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < hashBytes.Length; i++) {
