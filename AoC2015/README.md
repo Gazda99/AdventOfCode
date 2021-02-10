@@ -9,6 +9,6 @@
 | [Day 5: Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day5) | 2 | 
 | [Day 6: Probably a Fire Hazard](https://adventofcode.com/2015/day/6) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day6) | 2 | 
 | [Day 7: Some Assembly Required](https://adventofcode.com/2015/day/7) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day7) | 0 | 
-| [Day 8: Matchsticks](https://adventofcode.com/2015/day/8) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day8) | 0 | 
+| [Day 8: Matchsticks](https://adventofcode.com/2015/day/8) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day8) | 2 | 
 
 ### [Go back](https://github.com/Gazda99/AdventOfCode)
