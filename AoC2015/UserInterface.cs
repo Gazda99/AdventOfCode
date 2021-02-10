@@ -16,6 +16,8 @@ class UserInterface : BaseUserInterface {
             6 => new Day6.Solution(dayNumber),
             7 => new Day7.Solution(dayNumber),
             8 => new Day8.Solution(dayNumber),
+            9 => new Day9.Solution(dayNumber),
+            10 => new Day10.Solution(dayNumber),
             _ => null
         };
 
