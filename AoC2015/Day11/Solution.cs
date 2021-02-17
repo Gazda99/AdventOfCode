@@ -12,6 +12,19 @@ class Solution : BaseSolution, ISolution<char[], string, string>, IAnswer {
 
     public char[] Data { get; set; }
 
+    private string _partOneAnswer;
+
+    public string PartOneAnswer {
+        get {
+            if (_partOneAnswer is null)
+                _partOneAnswer = SolveFirst();
+            return _partOneAnswer;
+        }
+    }
+
+    public string PartTwoAnswer => SolveSecond();
+
+
     public char[] ReadData() {
         try {
             StreamReader file = new StreamReader(DataPath());
@@ -29,17 +42,6 @@ class Solution : BaseSolution, ISolution<char[], string, string>, IAnswer {
         return Array.Empty<char>();
     }
 
-    private string _partOneAnswer;
-
-    public string PartOneAnswer {
-        get {
-            if (_partOneAnswer is null)
-                _partOneAnswer = SolveFirst();
-            return _partOneAnswer;
-        }
-    }
-
-    public string PartTwoAnswer => SolveSecond();
 
     private const int A = 97;
     private const int Z = 122;
