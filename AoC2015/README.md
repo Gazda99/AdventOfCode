@@ -13,6 +13,9 @@
 | [Day 9: All in a Single Night](https://adventofcode.com/2015/day/9) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day9) | 0 | 
 | [Day 10: Elves Look, Elves Say](https://adventofcode.com/2015/day/10) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day10) | 2 | 
 | [Day 11: Corporate Policy](https://adventofcode.com/2015/day/11) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day11) | 2 | 
+| [Day 12: JSAbacusFramework.io](https://adventofcode.com/2015/day/12) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day12) | 0 | 
+| [Day 13: Knights of the Dinner Table](https://adventofcode.com/2015/day/13) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day13) | 0 | 
+| [Day 14: Reindeer Olympics](https://adventofcode.com/2015/day/14) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day14) | 2 | 
 
 
 ### [Go back](https://github.com/Gazda99/AdventOfCode)
