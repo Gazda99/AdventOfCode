@@ -55,7 +55,7 @@ class Solution : BaseSolution, ISolution<char[], string, string>, IAnswer {
 
 
     public string SolveSecond() {
-        long checkSum = CalculateCheckSum(SolveFirst().ToCharArray());
+        long checkSum = CalculateCheckSum(PartOneAnswer.ToCharArray());
         checkSum++;
         return new string(FindPassword(CreateNextPassword(Data.Length, checkSum)));
     }
