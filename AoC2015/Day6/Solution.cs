@@ -4,7 +4,7 @@ using System.IO;
 using AoCBase;
 
 namespace AoC2015.Day6 {
-class Solution : BaseSolution, ISolution<List<Solution.Instruction>, int, int>, IAnswer {
+class Solution : BaseSolution, ISolution<List<Instruction>, int, int>, IAnswer {
     public Solution(int dayNumber) : base(dayNumber) {
         Data = ReadData();
         _grid = CreateGrid(GridSize);
@@ -132,38 +132,6 @@ class Solution : BaseSolution, ISolution<List<Solution.Instruction>, int, int>, 
         }
 
         return sum;
-    }
-
-    public class Instruction {
-        public Turning TurnActivity;
-        public Coordinate From;
-        public Coordinate To;
-
-        public Instruction(string turnActivity, Coordinate from, Coordinate to) {
-            TurnActivity = turnActivity switch {
-                "on" => Turning.TurnOn,
-                "off" => Turning.TurnOff,
-                "toggle" => Turning.Toggle
-            };
-            From = from;
-            To = to;
-        }
-    }
-
-    public class Coordinate {
-        public int A;
-        public int B;
-
-        public Coordinate(int[] values) {
-            A = values[0];
-            B = values[1];
-        }
-    }
-
-    public enum Turning {
-        TurnOn,
-        TurnOff,
-        Toggle
     }
 }
 }

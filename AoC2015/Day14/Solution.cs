@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using AoCBase;
 
 namespace AoC2015.Day14 {
-class Solution : BaseSolution, ISolution<List<Solution.Reindeer>, int, int>, IAnswer {
+class Solution : BaseSolution, ISolution<List<Reindeer>, int, int>, IAnswer {
     public Solution(int dayNumber) : base(dayNumber) {
         Data = ReadData();
         Race();
@@ -58,37 +58,6 @@ class Solution : BaseSolution, ISolution<List<Solution.Reindeer>, int, int>, IAn
             foreach (Reindeer reindeer in Data.Where(r => r.Distance == currentMaxDist))
                 //increase score by one for each reindeer with distance same as current max
                 reindeer.Score++;
-        }
-    }
-
-    public class Reindeer {
-        private readonly int _speed;
-        private readonly int _flyTime;
-        private readonly int _restTime;
-        public int Distance { get; private set; }
-        public int Score { get; set; }
-
-        public Reindeer(int speed, int flyTime, int restTime) {
-            _speed = speed;
-            _flyTime = flyTime;
-            _restTime = restTime;
-            _remainingTime = flyTime;
-        }
-
-
-        private bool _flying = true;
-        private int _remainingTime;
-
-        public void Fly() {
-            if (_remainingTime == 0) {
-                _remainingTime = _flying ? _restTime : _flyTime;
-                _flying = !_flying;
-            }
-
-            if (_flying)
-                Distance += _speed;
-
-            _remainingTime--;
         }
     }
 }
