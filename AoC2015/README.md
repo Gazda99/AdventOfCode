@@ -8,7 +8,7 @@
 | [Day 4: The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/4) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day4) | 2 | 
 | [Day 5: Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day5) | 2 | 
 | [Day 6: Probably a Fire Hazard](https://adventofcode.com/2015/day/6) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day6) | 2 | 
-| [Day 7: Some Assembly Required](https://adventofcode.com/2015/day/7) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day7) | 0 | 
+| [Day 7: Some Assembly Required](https://adventofcode.com/2015/day/7) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day7) | 2 | 
 | [Day 8: Matchsticks](https://adventofcode.com/2015/day/8) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day8) | 2 | 
 | [Day 9: All in a Single Night](https://adventofcode.com/2015/day/9) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day9) | 0 | 
 | [Day 10: Elves Look, Elves Say](https://adventofcode.com/2015/day/10) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day10) | 2 | 
