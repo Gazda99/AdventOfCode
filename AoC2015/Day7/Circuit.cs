@@ -13,7 +13,7 @@ class Circuit {
     /// <summary>
     /// Modifies the content of Dict
     /// </summary>
-    public void Modify(string key, ushort value) {
+    private void Modify(string key, ushort value) {
         if (!_wires.ContainsKey(key))
             _wires.Add(key, value);
         else _wires[key] = value;
@@ -22,7 +22,7 @@ class Circuit {
     /// <summary>
     /// Returns same values if it is ushort, or value from dict corresponding to the key
     /// </summary>
-    public ushort ValueOrDict(dynamic value) {
+    private ushort ValueOrDict(dynamic value) {
         if (value is string)
             return _wires[value];
         return value;
