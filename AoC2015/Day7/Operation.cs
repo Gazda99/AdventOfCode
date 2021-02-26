@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace AoC2015.Day7 {
 class Operation {
-    private ushort?[] _signals; // = new ushort?[3];
-    private string[] _wires; // = new string[3];
+    private ushort?[] _signals;
+    private string[] _wires;
     public int Count => _signals.Length;
     public LogicGates? Gate { get; private set; }
 
@@ -34,6 +35,17 @@ class Operation {
         if (_signals[i] is null)
             return _wires[i];
         return _signals[i];
+    }
+
+    /// Returns string array of wires on the left of assignment operator (->)
+    public string[] GetNeededWiresArray() {
+        List<string> neededWires = new List<string>();
+        for (int i = 0; i < _wires.Length - 1; i++) {
+            if (_wires[i] is not null)
+                neededWires.Add(_wires[i]);
+        }
+
+        return neededWires.ToArray();
     }
 }
 }

@@ -4,11 +4,7 @@ using System.Linq;
 
 namespace AoC2015.Day7 {
 class Circuit {
-    private Dictionary<string, ushort> _wires = new Dictionary<string, ushort>();
-
-    public void ClearDict() {
-        _wires = new Dictionary<string, ushort>();
-    }
+    private readonly Dictionary<string, ushort> _wires = new Dictionary<string, ushort>();
 
     /// <summary>
     /// Modifies the content of Dict
@@ -42,7 +38,7 @@ class Circuit {
 
 
         while (operationCount > 0) {
-            Operation op = opDelayed.FirstOrDefault(delayed => CanBeExecuted(GetWiresSymbols(delayed)));
+            Operation op = opDelayed.FirstOrDefault(delayed => CanBeExecuted(delayed.GetNeededWiresArray()));
             //before using queue, check if we cannot use any op from delayed
 
             //it executes when working op was found in delayed list
@@ -55,7 +51,7 @@ class Circuit {
                 //so we can dequeue now
                 op = opQueue.Dequeue();
                 //if cannot be executed yet, add this op to delayed and skip to next iteration
-                if (!CanBeExecuted(GetWiresSymbols(op))) {
+                if (!CanBeExecuted(op.GetNeededWiresArray())) {
                     opDelayed.Add(op);
                     continue;
                 }
@@ -84,19 +80,6 @@ class Circuit {
         return check;
     }
 
-    /// <summary>
-    /// Returns string array of wires on the left of assignment operator (->)
-    /// </summary>
-    private string[] GetWiresSymbols(Operation op) {
-        List<string> values = new List<string>();
-        for (int i = 0; i < op.Count - 1; i++) {
-            dynamic value = op.GetOperationValue(i);
-            if (value is string)
-                values.Add(value);
-        }
-
-        return values.ToArray();
-    }
 
     private void Execute(Operation op) {
         ushort result;
