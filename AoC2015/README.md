@@ -16,6 +16,8 @@
 | [Day 12: JSAbacusFramework.io](https://adventofcode.com/2015/day/12) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day12) | 0 | 
 | [Day 13: Knights of the Dinner Table](https://adventofcode.com/2015/day/13) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day13) | 0 | 
 | [Day 14: Reindeer Olympics](https://adventofcode.com/2015/day/14) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day14) | 2 | 
+| [Day 15: Science for Hungry People](https://adventofcode.com/2015/day/15) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day15) | 2 | 
+| [Day 16: Aunt Sue](https://adventofcode.com/2015/day/16) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day16) | 2 | 
 
 
 ### [Go back](https://github.com/Gazda99/AdventOfCode)
