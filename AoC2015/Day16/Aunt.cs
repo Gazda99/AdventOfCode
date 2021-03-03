@@ -38,25 +38,22 @@ class Aunt {
     }
 
     public bool IsMatchPartOne(Aunt other) {
-        if (!CheckIfEquals(this.Children, other.Children)) return false;
+        if (!CheckCommon(other)) return false;
         if (!CheckIfEquals(this.Cats, other.Cats)) return false;
         if (!CheckIfEquals(this.Goldfish, other.Goldfish)) return false;
         if (!CheckIfEquals(this.Trees, other.Trees)) return false;
-        if (!CheckIfEquals(this.Cars, other.Cars)) return false;
-        if (!CheckIfEquals(this.Perfumes, other.Perfumes)) return false;
 
         //check dogdict
-        foreach (var dog in this.DogsDict) {
-            if (!other.DogsDict.Contains(dog)) return false;
-        }
+        foreach (var dog in this.DogsDict)
+            if (!other.DogsDict.Contains(dog))
+                return false;
+
 
         return true;
     }
 
     public bool IsMatchPartTwo(Aunt other) {
-        if (!CheckIfEquals(this.Children, other.Children)) return false;
-        if (!CheckIfEquals(this.Cars, other.Cars)) return false;
-        if (!CheckIfEquals(this.Perfumes, other.Perfumes)) return false;
+        if (!CheckCommon(other)) return false;
         if (!CheckIfGreater(this.Cats, other.Cats)) return false;
         if (!CheckIfGreater(this.Trees, other.Trees)) return false;
         if (!CheckIfLesser(this.Goldfish, other.Goldfish)) return false;
@@ -71,6 +68,14 @@ class Aunt {
             if (!other.DogsDict.Contains(dog)) return false;
         }
 
+        return true;
+    }
+
+
+    private bool CheckCommon(Aunt other) {
+        if (!CheckIfEquals(this.Children, other.Children)) return false;
+        if (!CheckIfEquals(this.Cars, other.Cars)) return false;
+        if (!CheckIfEquals(this.Perfumes, other.Perfumes)) return false;
         return true;
     }
 
