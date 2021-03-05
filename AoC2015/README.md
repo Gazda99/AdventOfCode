@@ -19,7 +19,7 @@
 | [Day 15: Science for Hungry People](https://adventofcode.com/2015/day/15) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day15) | 0 | 
 | [Day 16: Aunt Sue](https://adventofcode.com/2015/day/16) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day16) | 2 | 
 | [Day 17: No Such Thing as Too Much](https://adventofcode.com/2015/day/17) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day17) | 0 | 
-| [Day 16: Aunt Sue](https://adventofcode.com/2015/day/18) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day18) | 2 | 
+| [Day 18: Aunt Sue](https://adventofcode.com/2015/day/18) | [link](https://github.com/Gazda99/AdventOfCode/tree/main/AoC2015/Day18) | 2 | 
 
 
 ### [Go back](https://github.com/Gazda99/AdventOfCode)
